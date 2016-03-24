@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>
+			Page.
+		</title>
+		<script src="jquery-2.2.1.min.js"></script>
+		<script src="angular.min.js"></script>
+		<script src="lodash.js"></script>
+		<script src="index.js"></script>
+		<link href="style.css" rel="stylesheet"></link>
+
+	</head>
+	<body ng-app="app" ng-controller="appController" >
+		<div class="tile" ng-repeat="tile in tiles" style="left:{{tile.getCssX()}}; top:{{tile.getCssY()}}">
+			{{tile.x}}
+			{{tile.y}}
+		</div>
+		<button ng-click="addTile()">Add Tile</button>
+	</body>
+</html>
